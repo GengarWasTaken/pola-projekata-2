@@ -1,0 +1,106 @@
+@import  "reset";
+@import  "config";
+
+$primary-color: #FFED00;
+$secondary-color: #E2313A;
+$tertiary-color: #000E19;
+
+$font-stack: "Inter";
+
+body {
+    background-color: $secondary-color;
+    font-family: $font-stack;
+
+    .container {
+    
+
+    main {
+        background: $tertiary-color;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+
+
+        article {
+
+            width: 100%;
+            margin-top: -15em;
+
+
+
+
+            h1 {
+                font-size: 150px;
+                text-transform: uppercase;
+                letter-spacing: -6px;
+                font-weight: 900;  
+                
+            }
+
+
+            h1:nth-child(1) {
+                color: $primary-color;
+                position: absolute;
+                margin-top: -0.15em;
+
+
+            }
+            
+            h1:nth-child(2) {
+                background-color: $primary-color;
+                color: transparent;
+                position: relative;
+                height: 109px;
+                width: 93.4%;
+            }
+
+            h1:nth-child(2)::before {
+                content: "EVER";
+                position: absolute;
+                font-size: 150px;
+                width: 772.5px;
+                color: $tertiary-color;
+                top: -54%;
+            }
+
+            h1:nth-child(3) {
+                color: $primary-color;
+                position: absolute;
+                margin-top: -0.35em;
+            }
+        }
+
+
+        
+    }
+
+    nav {
+
+        background-color: $tertiary-color;
+        border-left: 1px $primary-color solid;
+
+
+    .links{
+
+        background-color: $tertiary-color;
+        }
+
+    a {
+        transform: rotate(-90deg);
+        font-size: 55px;
+        font-weight: 800;
+        letter-spacing: -3.5px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $primary-color;
+        border-left: 5px $secondary-color dotted;
+        padding-left: 0.25em;
+
+
+    }
+    }
+    }
+}

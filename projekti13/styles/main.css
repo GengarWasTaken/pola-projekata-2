@@ -1,0 +1,528 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.container {
+  margin: 0% auto;
+  padding-top: 1.5em;
+  width: 80%;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 4em;
+}
+.logo {
+  background-image: url("images/logo.png");
+  display: inline-block;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  flex-basis: 5%;
+  cursor: pointer;
+  transition: 250ms;
+  animation-name: heartline;
+  animation-duration: 1.4s;
+  animation-iteration-count: infinite;
+  opacity: 0.5;
+}
+@keyframes heartline {
+  0% {
+    transform: scale (1);
+    background-image: url("images/logo.png");
+  }
+  10% {
+    transform: scale(1.25);
+    background-image: url("images/logohover.png");
+  }
+  30% {
+    transform: scale(1);
+    background-image: url("images/logo.png");
+  }
+  50% {
+    transform: scale(1.25);
+    background-image: url("images/logohover.png");
+  }
+  70% {
+    transform: scale(1);
+    background-image: url("images/logo.png");
+  }
+  100% {
+    transform: scale(1);
+    background-image: url("images/logo.png");
+  }
+}
+body {
+  background-image: url("images/test.png");
+  width: 100%;
+  height: 100%;
+  background-size: 60% 30%;
+  background-repeat: no-repeat;
+  background-position-x: 20em;
+  background-position-y: -3em;
+}
+.logo:hover {
+  background-image: url("images/logohover.png");
+  display: inline-block;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  flex-basis: 5%;
+  cursor: pointer;
+  transition: 250ms;
+  transform: scale(1.25);
+  opacity: 1;
+}
+.navbar {
+  flex-basis: 95%;
+  margin: 0% auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  }
+.navbar div {
+  display: flex;
+  flex-basis: 5%;
+  justify-content: flex-end;
+   text-transform: uppercase;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 0.75em;
+  cursor: pointer;
+  border-right: 0.5px dotted red;
+  padding: 1em;
+  transition: 250ms;
+  opacity: 0.5;
+}
+.navbar div:hover {
+  padding: 0.95em;
+  transition: 250ms;
+  border-right: 0.5px dotted red;
+  border-radius: 5px;
+  padding: 2em;
+  opacity: 1;
+  border-radius: 5px;
+}
+.home::before {
+  content: "\f015";
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+  opacity: 0;
+  transition: 250ms;
+}
+.home:hover::before {
+  opacity: 1;
+  transition: 250ms;
+  padding-right: 1em;
+}
+.blog::before {
+  content: "\f58f";
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+  opacity: 0;
+  transition: 250ms;
+}
+.blog:hover::before {
+  opacity: 1;
+  transition: 250ms;
+  padding-right: 1em;
+}
+.contact::before {
+  content: "\f095";
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+  opacity: 0;
+  transition: 250ms;
+}
+.contact:hover::before {
+  opacity: 1;
+  transition: 250ms;
+  padding-right: 1em;
+}
+.main {
+  margin: 0% auto;
+  width: 80%;
+  margin-top: 12.5em;
+  height: 33em;
+  border-top: 0.5px dotted black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row  ;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.guy1 {
+  position: relative;
+  margin-top: 8em;
+  width: 20%;
+  height: 100%;
+  background-image: url("images/guy2.png");
+  background-repeat: no-repeat;
+  background-position: 50% 25%;
+  background-size: 40% 55%;
+  transition: ease-in-out 250ms;
+  border-radius: 5px;
+  cursor: pointer;
+  animation-name: "shadow1";
+  animation-duration: 1500ms;
+  animation-iteration-count: infinite;
+  animation-delay: 250ms;
+}
+@keyframes shadow1  {
+  50% {box-shadow: 10px 9px 16px 0px rgba(222,194,58, 0.8);}
+}
+
+.guy1 span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  transition: 250ms;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding-bottom: 0em;
+}
+.guy1 h3 {
+  text-align: center;
+  line-height: 2.5em;
+}
+.guy1 p {
+  text-align: justify;
+  line-height: 1.25em;
+}
+.guy1:hover {
+  position: relative;
+  width: 20%;
+  height: 100%;
+  background-image: url("images/guy22.png");
+  background-repeat: no-repeat;
+  background-position: 50% 15%;
+  background-size: 50% 65%;
+-- background-color: red; --
+  opacity: 1;
+  transition: ease-in-out 250ms;
+  border-radius: 5px;
+  box-shadow:  4px 3px 5px 0px rgba(50, 50, 50, 0.75);
+  border-bottom: 0px;
+  animation: none;
+}
+.guy1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:#DEC23A;
+  opacity: 0;
+  transition: 250ms;
+}
+.guy1:hover::after {
+  opacity: 1;
+  z-index: -1;
+  transition: scale(1) 250ms;
+}
+.guy1:hover span {
+  opacity: 1;
+  
+  transition: 250ms;
+  padding-bottom: 1em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+.guy2 {
+  position: relative;
+  width: 20%;
+  height: 100%;
+  margin-top: 4em;
+  background-image: url("images/guy1.png");
+  background-repeat: no-repeat;
+  background-position: 50% 25%;
+  background-size: 40% 55%;
+  transition: ease-in-out 250ms;
+  border-radius: 5px;
+  cursor: pointer;
+  animation-name: "shadow2";
+  animation-duration: 1500ms;
+  animation-delay: 500ms;
+  animation-iteration-count: infinite;
+}
+@keyframes shadow2  {
+  50% {box-shadow: 10px 9px 16px 0px rgba(188,40,37, 0.8);}
+}
+.guy2 span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  transition: 250ms;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding-bottom: 0em;
+}
+.guy2 h3 {
+  text-align: center;
+  line-height: 2.5em;
+}
+.guy2 p {
+  text-align: justify;
+  line-height: 1.25em;
+}
+.guy2:hover {
+  position: relative;
+  width: 20%;
+  height: 100%;
+  background-image: url("images/guy12.png");
+  background-repeat: no-repeat;
+  background-position: 50% 15%;
+  background-size: 50% 65%;
+-- background-color: purple; --
+  opacity: 0.5;
+  transition: ease-in-out 250ms;
+  border-radius: 5px;
+  box-shadow:         4px 3px 5px 0px rgba(50, 50, 50, 0.75);
+  transition: scale(1, 0) 250ms;
+  border-bottom: 0px;
+  animation-name: none;
+}
+.guy2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #BC2825;
+  opacity: 0;
+  transition: scale(0) 250ms;
+}
+.guy2:hover::after {
+  opacity: 1;
+  z-index: -1;
+  transition: scale(1) 250ms;
+}
+.guy2:hover span {
+  opacity: 1;
+  
+  transition: 250ms;
+  padding-bottom: 1em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+.guy3 {
+  position: relative;
+  width: 20%;
+  height: 100%;
+  margin-top: 8em;
+  background-image: url("images/guy3.png");
+  background-repeat: no-repeat;
+  background-position: 50% 25%;
+  background-size: 40% 55%;
+  transition: ease-in-out 250ms;
+  border-radius: 5px;
+  cursor: pointer;
+  animation-name: "shadow3";
+  animation-duration: 1500ms;
+  animation-delay: 750ms;
+  animation-iteration-count: infinite;
+}
+@keyframes shadow3  {
+  50% {box-shadow: 10px 9px 16px 0px rgba(0,89,165, 0.8);}
+}
+.guy3 span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  transition: 250ms;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding-bottom: 0em;
+}
+.guy3 h3 {
+  text-align: center;
+  line-height: 2.5em;
+}
+.guy3 p {
+  text-align: justify;
+  line-height: 1.25em;
+}
+.guy3:hover {
+  position: relative;
+  width: 20%;
+  height: 100%;
+  background-image: url("images/guy32.png");
+  background-repeat: no-repeat;
+  background-position: 50% 15%;
+  background-size: 50% 65%;
+  -- background-color: red; --
+  transition: ease-in-out 250ms;
+  border-radius: 5px;
+  box-shadow:         4px 3px 5px 0px rgba(50, 50, 50, 0.75);
+  transition: scale(1, 0) 250ms;
+  border-bottom: 0px;
+  animation-name: none;
+}
+.guy3::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0059A5;
+  opacity: 0;
+  transition: scale(0) 250ms;
+}
+.guy3:hover::after {
+  opacity: 1;
+  z-index: -1;
+  transition: scale(1) 250ms;
+}
+.guy3:hover span {
+  opacity: 1;
+  
+  transition: 250ms;
+  padding-bottom: 1em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+.guy1:hover span {
+  border-top: 1px dotted  #BC2825;
+  border-radius: 50px;
+}
+.guy2:hover span {
+  border-top: 1px dotted #0157A5;
+  border-radius: 50px;
+}
+.guy3:hover span {
+  border-top: 1px dotted #DEC23A;
+  border-radius: 50px;
+}
+.speak {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  font-size: 4em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  font-family: "Impact";
+  letter-spacing: 0.25em;
+  
+  font-weight: 100;
+  color: white;
+  -webkit-text-stroke: 2px black;
+}
+.speak .span1 {
+  color: #DEC23A;
+}
+.speak .span2 {
+  color: #BC2825;
+}
+.speak .span3 {
+  color: #0059A5;
+}
+.span1 {
+  animation-name: "hm1";
+  animation-duration: 1500ms;
+  animation-iteration-count: infinite;
+  -webkit-text-stroke: 1px black;
+  
+}
+@keyframes hm1 {
+  30% {color: #BC2825}
+  60% {color: #0059A5}
+}
+.span2 {
+  animation-name: "hm2";
+  animation-duration: 1500ms;
+  animation-iteration-count: infinite;
+  -webkit-text-stroke: 1px black;
+}
+@keyframes hm2 {
+  30% {color: #0059A5}
+  60% {color: #DEC23A}
+}
+.span3 {
+  animation-name: "hm3";
+  animation-duration: 1500ms;
+  animation-iteration-count: infinite;
+  -webkit-text-stroke: 1px black;
+}
+@keyframes hm3 {
+  30% {color:#DEC23A }
+  60% {color:  #BC2825}
+}
+.spanner {
+  opacity: 0.6;
+
+}

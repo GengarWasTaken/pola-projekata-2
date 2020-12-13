@@ -1,0 +1,255 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  overflow: hidden;
+}
+
+.container {
+  margin: 0% auto;
+  height: 80vh;
+  width: 80vw;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1.5fr .25fr 2fr;
+      grid-template-columns: 1.5fr .25fr 2fr;
+      grid-template-areas: "img nav main";
+  margin-top: 0.5em;
+}
+
+.container img {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: img;
+  z-index: 2;
+}
+
+.container .logo {
+  width: 5%;
+  position: absolute;
+  top: 86%;
+  left: 83.5%;
+}
+
+.container main {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: main;
+}
+
+.container main article {
+  margin-left: 6.75em;
+}
+
+.container nav {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: nav;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.container nav .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  margin-top: 4em;
+  margin-left: 2.5em;
+}
+
+.container nav .links img {
+  position: absolute;
+  top: 34%;
+  width: 25%;
+  left: 34%;
+  z-index: 2;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.container nav .links a {
+  margin-top: 2.25em;
+}
+
+body {
+  background-color: #E2313A;
+  font-family: "Inter";
+}
+
+body .container main {
+  background: #000E19;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container main article {
+  width: 100%;
+  margin-top: -15em;
+}
+
+body .container main article h1 {
+  font-size: 150px;
+  text-transform: uppercase;
+  letter-spacing: -6px;
+  font-weight: 900;
+}
+
+body .container main article h1:nth-child(1) {
+  color: #FFED00;
+  position: absolute;
+  margin-top: -0.15em;
+}
+
+body .container main article h1:nth-child(2) {
+  background-color: #FFED00;
+  color: transparent;
+  position: relative;
+  height: 109px;
+  width: 93.4%;
+}
+
+body .container main article h1:nth-child(2)::before {
+  content: "EVER";
+  position: absolute;
+  font-size: 150px;
+  width: 772.5px;
+  color: #000E19;
+  top: -54%;
+}
+
+body .container main article h1:nth-child(3) {
+  color: #FFED00;
+  position: absolute;
+  margin-top: -0.35em;
+}
+
+body .container nav {
+  background-color: #000E19;
+  border-left: 1px #FFED00 solid;
+}
+
+body .container nav .links {
+  background-color: #000E19;
+}
+
+body .container nav a {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  font-size: 55px;
+  font-weight: 800;
+  letter-spacing: -3.5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #FFED00;
+  border-left: 5px #E2313A dotted;
+  padding-left: 0.25em;
+}
+/*# sourceMappingURL=style.css.map */
